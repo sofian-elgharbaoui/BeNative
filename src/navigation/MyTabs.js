@@ -18,14 +18,6 @@ const MyTabs = () => {
     <Tab.Navigator
       initialRouteName="Profile"
       screenOptions={{
-        headerBackgroundContainerStyle: {
-          backgroundColor: "transparent",
-        },
-        headerStyle: {
-          backgroundColor: "transparent",
-          borderBottomColor: "transparent",
-          borderBottomWidth: 0,
-        },
         headerBackVisible: false,
         headerTitleStyle: styles.titleStyle,
         tabBarShowLabel: false,

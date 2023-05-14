@@ -22,13 +22,18 @@ export default function App() {
   });
 
   const onReady = useCallback(async () => {
-    if (fontsLoaded) await SplashScreen.hideAsync();
+    if (fontsLoaded)
+      try {
+        await SplashScreen.hideAsync();
+      } catch (err) {
+        console.log(err);
+      }
   }, [fontsLoaded]);
 
   if (!fontsLoaded) {
     return null;
   }
-  // to change the bgColor
+  // to change the default bgColor
   const Theme = {
     ...DefaultTheme,
     colors: {
