@@ -9,11 +9,11 @@ import {
   Nunito_800ExtraBold,
 } from "@expo-google-fonts/nunito";
 
-import MyTabs from "./src/navigation/MyTabs";
+import MyStack from "./src/navigation/MyStack";
 
 SplashScreen.preventAutoHideAsync();
 
-export default function App() {
+function App() {
   const [fontsLoaded] = useFonts({
     Nunito_400Regular,
     Nunito_500Medium,
@@ -44,7 +44,9 @@ export default function App() {
 
   return (
     <NavigationContainer theme={Theme} onReady={onReady}>
-      <MyTabs />
+      <MyStack />
     </NavigationContainer>
   );
 }
+
+export default App;

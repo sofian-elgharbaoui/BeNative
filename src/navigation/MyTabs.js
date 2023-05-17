@@ -7,16 +7,16 @@ import {
   MaterialCommunityIcons,
 } from "@expo/vector-icons";
 
-import HomeScreen from "../screens/Home/Home";
+import Home from "../screens/Home/Home";
 import PracticeScreen from "../screens/Practice/Practice";
 import AnalysisScreen from "../screens/Analysis/Analysis";
-import ProfileScreen from "../screens/Profile/Profile";
+import Profile from "../screens/Profile/Profile";
 
+const Tab = createBottomTabNavigator();
 const MyTabs = () => {
-  const Tab = createBottomTabNavigator();
   return (
     <Tab.Navigator
-      initialRouteName="Profile"
+      initialRouteName="Home"
       screenOptions={{
         headerBackVisible: false,
         headerTitleStyle: styles.titleStyle,
@@ -26,7 +26,7 @@ const MyTabs = () => {
     >
       <Tab.Screen
         name="Home"
-        component={HomeScreen}
+        component={Home}
         options={{
           tabBarIcon: ({ focused }) => (
             <View style={focused ? styles.currTab : {}}>
@@ -71,7 +71,7 @@ const MyTabs = () => {
       />
       <Tab.Screen
         name="Profile"
-        component={ProfileScreen}
+        component={Profile}
         options={{
           tabBarIcon: ({ focused }) => (
             <View style={focused ? styles.currTab : {}}>
@@ -100,7 +100,6 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 25,
     borderTopRightRadius: 25,
     borderTopWidth: 0,
-    // position: "absolute",
   },
   currTab: {
     backgroundColor: "#05BFDB",

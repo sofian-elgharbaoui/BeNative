@@ -3,10 +3,11 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    paddingVertical: 15,
     alignItems: "center",
   },
   register: {
-    backgroundColor: "#eee",
+    backgroundColor: "#f9f9f9",
     borderRadius: 20,
     alignItems: "center",
     marginHorizontal: 30,
@@ -17,7 +18,7 @@ const styles = StyleSheet.create({
     fontFamily: "Nunito_800ExtraBold",
     fontSize: 20,
   },
-  registerPr: {
+  registerPg: {
     fontFamily: "Nunito_500Medium",
   },
   registerBn: {
@@ -27,6 +28,7 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     marginTop: 20,
     shadowColor: "#00ffc1",
+    elevation: 20,
     shadowOpacity: 0.5,
     shadowRadius: 10,
     shadowOffset: {
@@ -34,7 +36,7 @@ const styles = StyleSheet.create({
       height: -5,
     },
   },
-  Register_Text: {
+  registerTxt: {
     fontFamily: "Nunito_700Bold",
     color: "#fff",
     letterSpacing: 0.5,
@@ -55,7 +57,7 @@ const styles = StyleSheet.create({
     color: "gray",
   },
   cardInfo: {
-    backgroundColor: "#eee",
+    backgroundColor: "#f9f9f9",
     width: "90%",
     padding: 15,
     borderRadius: 20,
@@ -77,13 +79,12 @@ const styles = StyleSheet.create({
   },
   gradientBotton: {
     borderRadius: 50,
-    padding: 10,
   },
   cardInfo_Botton_Container: {
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    height: 40,
+    height: 60,
   },
   faceIcon: {
     marginRight: 10,
@@ -93,18 +94,21 @@ const styles = StyleSheet.create({
   cardInfo_Botton: {
     fontFamily: "Nunito_500Medium",
     fontSize: 20,
+    color: "#fff",
+    textShadowColor: "#555",
+    textShadowRadius: 5,
   },
   cardInfo_Botton_Premium: {
     fontFamily: "Nunito_700Bold",
     letterSpacing: 0.6,
   },
   logOutBn: {
-    borderColor: "#bbb",
+    borderColor: "#eee",
     paddingVertical: 10,
     paddingHorizontal: 30,
     borderWidth: 2,
     borderRadius: 50,
-    marginVertical: 25,
+    marginTop: 30,
     flexDirection: "row",
     alignItems: "center",
     gap: 10,
@@ -114,8 +118,8 @@ const styles = StyleSheet.create({
     fontSize: 20,
   },
   navList: {
-    width: "100%",
-    padding: 15,
+    marginTop: 30,
+    width: "90%",
     gap: 15,
   },
   navList_Item: {
